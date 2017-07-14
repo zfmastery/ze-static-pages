@@ -15,3 +15,17 @@ All you need to do is:
 At this stage, the project is still under heavy development. 
 So there are no further instructions. 
 But, they will follow shortly.
+
+## Getting Started / Installing
+
+To install the module, use Composer by running `composer require zfmastery/ze-static-pages`.
+The current release doesn't support automatic creation of the required module configuration file, nor of the template directory.
+That is planned for a future release however.
+Given that:
+ 
+1. Copy the default config file `config/static-pages.global.php` to your Zend Expressive's `config/autoload/` directory.
+2. In the root directory, create the directory structure `templates/static-pages/` and in there create your static templates files.
+
+## Running the Tests
+
+To run the unit tests, run `composer test`.
