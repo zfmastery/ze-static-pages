@@ -21,7 +21,6 @@ class ConfigProvider
     {
         return [
             'dependencies' => $this->getDependencies(),
-            'templates'    => $this->getTemplates(),
         ];
     }
 
@@ -35,20 +34,6 @@ class ConfigProvider
         return [
             'factories'  => [
                 Action\StaticPagesAction::class => Action\StaticPagesFactory::class,
-            ],
-        ];
-    }
-
-    /**
-     * Returns the templates configuration
-     *
-     * @return array
-     */
-    public function getTemplates()
-    {
-        return [
-            'paths' => [
-                'static-pages'    => [__DIR__ . '/../templates/static-pages'],
             ],
         ];
     }
