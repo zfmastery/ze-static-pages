@@ -1,0 +1,44 @@
+{
+    "name": "zfmastery/ze-static-pages",
+    "description": "An easy, almost painless, way to render static pages in Zend Expressive applications.",
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "http",
+        "middleware",
+        "psr",
+        "psr-15",
+        "static pages",
+        "static content"
+    ],
+    "require": {
+        "php": "^5.6 || ^7.0",
+        "roave/security-advisories": "dev-master",
+        "zendframework/zend-expressive": "^2.0.2"
+    },
+    "require-dev": {
+        "codeception/codeception": "^2.3",
+        "mikey179/vfsStream": "^1.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "StaticPages\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "StaticPagesTest\\": "test/"
+        }
+    },
+    "scripts": {
+        "check": [
+            "@cs-check",
+            "@test"
+        ],
+        "cs-check": "phpcs --standard=PSR2 src/ test/",
+        "cs-fix": "phpcbf",
+        "test": "phpunit --colors=always",
+        "test-coverage": "phpunit --colors=always --coverage-clover clover.xml",
+        "upload-coverage": "coveralls -v"
+    }
+}
