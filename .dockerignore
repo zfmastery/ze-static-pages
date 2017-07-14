@@ -1,0 +1,8 @@
+.*
+C*
+c*
+docker-compose.yml
+Dockerfile
+LICENSE
+php*
+README.md

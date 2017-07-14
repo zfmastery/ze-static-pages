@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<ruleset name="ZfMaster Coding Standard">
+
+    <!-- Paths to check -->
+    <file>src</file>
+    <file>test</file>
+
+    <exclude-pattern>test/log/</exclude-pattern>
+</ruleset>
