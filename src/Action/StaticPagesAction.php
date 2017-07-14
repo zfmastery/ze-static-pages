@@ -42,7 +42,7 @@ class StaticPagesAction implements ServerMiddlewareInterface
      */
     public function process(ServerRequestInterface $request, DelegateInterface $delegate)
     {
-        /** @var RouteResult $routeName */
+        /** @var RouteResult     $routeName */
         $routeName = ($request->getAttribute("Zend\Expressive\Router\RouteResult"))->getMatchedRouteName();
         $templateName = sprintf('%s::%s', self::TEMPLATE_NS, substr($routeName, strrpos($routeName, '.') + 1));
 
