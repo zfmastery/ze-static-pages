@@ -46,7 +46,7 @@ class StaticPagesActionTest extends TestCase
             ->willReturn($routeName);
 
         $request = $this->prophet->prophesize(ServerRequestInterface::class);
-        $request->getAttribute("Zend\Expressive\Router\RouteResult")
+        $request->getAttribute(RouteResult::class)
             ->willReturn($routeResult->reveal());
 
         $this->assertInstanceOf(
