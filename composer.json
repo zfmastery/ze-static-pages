@@ -11,6 +11,14 @@
         "static pages",
         "static content"
     ],
+    "authors": [
+        {
+            "name": "Matthew Setter",
+            "email": "matthew.setter@gmail.com",
+            "homepage": "https://matthewsetter.com",
+            "role": "Developer"
+        }
+    ],
     "require": {
         "php": "^5.6 || ^7.0",
         "roave/security-advisories": "dev-master",
