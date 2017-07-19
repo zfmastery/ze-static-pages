@@ -32,14 +32,13 @@ class StaticPagesActionTest extends TestCase
     public function testDoesRequestCorrectTemplate($routeName, $templateName)
     {
         $delegate = $this->prophet->prophesize(DelegateInterface::class);
-        $router = $this->prophet->prophesize(RouterInterface::class);
         $template = $this->prophet->prophesize(TemplateRendererInterface::class);
         $template
             ->render($templateName)
             ->shouldBeCalledTimes(1)
             ->willReturn('<html></html>');
 
-        $action = new StaticPagesAction($router->reveal(), $template->reveal());
+        $action = new StaticPagesAction($template->reveal());
 
         $routeResult = $this->prophet->prophesize(RouteResult::class);
         $routeResult->getMatchedRouteName()
