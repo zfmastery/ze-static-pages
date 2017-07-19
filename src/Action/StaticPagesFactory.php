@@ -10,11 +10,10 @@ class StaticPagesFactory
 {
     public function __invoke(ContainerInterface $container)
     {
-        $router   = $container->get(RouterInterface::class);
         $template = $container->has(TemplateRendererInterface::class)
             ? $container->get(TemplateRendererInterface::class)
             : null;
 
-        return new StaticPagesAction($router, $template);
+        return new StaticPagesAction($template);
     }
 }

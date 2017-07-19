@@ -15,11 +15,6 @@ class StaticPagesAction implements ServerMiddlewareInterface
     const TEMPLATE_NS = 'static-pages';
 
     /**
-     * @var RouterInterface
-     */
-    private $router;
-
-    /**
      * @var TemplateRendererInterface
      */
     private $template;
@@ -29,9 +24,8 @@ class StaticPagesAction implements ServerMiddlewareInterface
      * @param RouterInterface $router
      * @param TemplateRendererInterface|null $template
      */
-    public function __construct(RouterInterface $router, TemplateRendererInterface $template = null)
+    public function __construct(TemplateRendererInterface $template = null)
     {
-        $this->router   = $router;
         $this->template = $template;
     }
 
